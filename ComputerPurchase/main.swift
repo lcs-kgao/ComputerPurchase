@@ -37,7 +37,7 @@ while true {
 //Create a global variable
 var specInput = "SuperFastComputer 1000 50 75"
 let sum = 0
-var bestComputer = 0
+var bestComputer = -1
 var arrayOfComputer = [String : Int]()
 var perfectName = ""
 // Collect the list of computer specs here
