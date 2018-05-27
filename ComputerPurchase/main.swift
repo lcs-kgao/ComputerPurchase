@@ -38,7 +38,6 @@ while true {
 var specInput = "SuperFastComputer 1000 50 75"
 let sum = 0
 var bestComputer = -1
-var arrayOfComputer = [String : Int]()
 var perfectName = ""
 // Collect the list of computer specs here
 for counter in 1...countOfExpectedSpecsThatWillBeProvided {
@@ -54,16 +53,16 @@ for counter in 1...countOfExpectedSpecsThatWillBeProvided {
     }
     specInput = givenInput
     
-    // NOTE：
-    
-    // Some example code that may be useful
     
     print("The example input is: \(specInput)")
+    //Separate the codes to many sections
     let specPieces = specInput.split(separator: " ")
+    //Separate the values
     let computerName = specPieces[0]
     let computerRAM = specPieces[1]
     let computerCPU = specPieces[2]
     let computerDiskSpace = specPieces[3]
+    //Print out the names.
     print("Computer name is: \(computerName)")
     print("Computer RAM amount is: \(computerRAM)")
     print("Computer CPU speed is: \(computerCPU)")
@@ -73,8 +72,10 @@ for counter in 1...countOfExpectedSpecsThatWillBeProvided {
     let specComputer = 2 * Int(computerRAM)! + 3 * Int(computerCPU)! + Int(computerDiskSpace)!
     
     //Find the best computer
+    //When the value of one computer is bigger than the other one, replace the best computer with the new computer
     if specComputer > bestComputer {
         bestComputer = specComputer
+        //Let the name of the perfect computer be the name of the new computer
         perfectName = String(computerName)
         
     }
@@ -82,15 +83,3 @@ for counter in 1...countOfExpectedSpecsThatWillBeProvided {
 
 // Print the result
 print("The best computer for you is \(perfectName)")
-
-    //    arrayOfComputer.updateValue(specComputer, forKey: String(computerName))
-    //    print(arrayOfComputer)
-    //    for i in arrayOfComputer {
-    //        print(i)
-    //        let value = Array(arrayOfComputer.values)
-    //
-    //    }
-    //}
-    
-
-
